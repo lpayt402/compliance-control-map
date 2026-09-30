@@ -1,8 +1,8 @@
 # Compliance Control Map
 
-A small, self-hosted workspace for seeing framework readiness, assigning gaps, explaining controls, and keeping reusable documents and evidence together. The centerpiece is an ATT&CK Navigator-inspired requirement atlas with a focused three-quarter-page detail sheet.
+A self-hosted workspace for mapping SOC 2 readiness, assigning gaps, and linking controls, documents, and evidence. The map view gives each requirement a compact detail panel.
 
-SOC 2 Trust Services Criteria is the included first lens. The data model also separates framework requirements from organizational controls and reserves cross-framework mappings, so additional frameworks can share controls and evidence without pretending their statuses are interchangeable.
+SOC 2 Trust Services Criteria is the first included framework. Requirements and organizational controls stay separate, so a control can support multiple frameworks without making their statuses interchangeable.
 
 ## Quick start
 
@@ -90,7 +90,7 @@ Primary API groups are `/frameworks`, `/requirements`, `/controls`, `/crosswalks
 
 ## Team/server mode
 
-### Fresh internal deployment
+### Set up a server workspace
 
 1. Run the local launcher once to create `.env`, then replace every `CHANGE_ME` value and both `example.com` entries.
 2. Use a unique 15+ character Admin passphrase and a separate long, random PostgreSQL password.
@@ -205,7 +205,7 @@ Complete deployment smoke tests run in isolated Compose projects and delete only
 .\tests\smoke\server-mode.ps1
 ```
 
-The server smoke test exercises PostgreSQL, login, Admin/Editor/Viewer permissions, upload/download integrity, the complete database-backed test suite, and browser role gates. The one skipped case is an intentionally SQLite-only connection pragma. No GitHub remote, CI workflow, or publishing configuration is created by this project build.
+The server smoke test exercises PostgreSQL, login, Admin/Editor/Viewer permissions, upload/download integrity, the complete database-backed test suite, and browser role gates. The one skipped case is an intentionally SQLite-only connection pragma.
 
 ## Security and optional model assistance
 
