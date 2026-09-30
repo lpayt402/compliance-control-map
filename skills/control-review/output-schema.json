@@ -1,0 +1,13 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "wording_suggestions", "missing_operating_detail", "implementation_note_draft", "evidence_categories", "source_references"],
+  "properties": {
+    "summary": {"type": "string"},
+    "wording_suggestions": {"type": "array", "items": {"type": "string"}},
+    "missing_operating_detail": {"type": "array", "items": {"type": "string"}},
+    "implementation_note_draft": {"type": "string"},
+    "evidence_categories": {"type": "array", "items": {"type": "string"}},
+    "source_references": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}

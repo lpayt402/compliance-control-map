@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/compliance-control-map/agent-profile.schema.json",
+  "title": "Compliance Control Map agent profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "name", "description", "enabled", "instructions_file", "skills", "tools", "record_scopes", "human_confirmation"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "description": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "enabled": { "type": "boolean" },
+    "instructions_file": { "type": "string", "pattern": "^[^/\\\\].*\\.md$" },
+    "provider_profile_ref": { "type": ["string", "null"], "maxLength": 120 },
+    "skills": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" } },
+    "tools": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" } },
+    "record_scopes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["requirement", "control", "document_metadata", "evidence_metadata"] }
+    },
+    "human_confirmation": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["workspace_write", "file_read", "file_download", "external_transfer", "export"] }
+    },
+    "max_iterations": { "type": "integer", "minimum": 1, "maximum": 25, "default": 5 },
+    "timeout_seconds": { "type": "integer", "minimum": 1, "maximum": 300, "default": 60 }
+  }
+}

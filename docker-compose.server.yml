@@ -1,0 +1,38 @@
+services:
+  api:
+    environment:
+      CCM_APP_ENV: production
+      CCM_AUTH_MODE: local
+      CCM_ALLOW_INSECURE_NO_AUTH: "false"
+      CCM_DATABASE_URL: postgresql+psycopg://${CCM_POSTGRES_USER:-ccm}:${CCM_POSTGRES_PASSWORD:?Set CCM_POSTGRES_PASSWORD}@postgres:5432/${CCM_POSTGRES_DB:-compliance_control}
+      CCM_BOOTSTRAP_ADMIN_EMAIL: ${CCM_BOOTSTRAP_ADMIN_EMAIL:-}
+      CCM_BOOTSTRAP_ADMIN_DISPLAY_NAME: ${CCM_BOOTSTRAP_ADMIN_DISPLAY_NAME:-Workspace administrator}
+      CCM_BOOTSTRAP_ADMIN_PASSWORD: ${CCM_BOOTSTRAP_ADMIN_PASSWORD:-}
+      CCM_LOAD_DEMO: ${CCM_SERVER_LOAD_DEMO:-false}
+      CCM_ALLOWED_ORIGINS: ${CCM_ALLOWED_ORIGINS:?Set CCM_ALLOWED_ORIGINS to the browser-facing HTTPS origin}
+      CCM_ALLOWED_HOSTS: ${CCM_ALLOWED_HOSTS:?Set CCM_ALLOWED_HOSTS to the deployed hostname}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  web:
+    ports: !override
+      - "${CCM_WEB_BIND:-0.0.0.0}:${CCM_WEB_PORT:-3000}:8080"
+
+  postgres:
+    image: postgres:17.11-alpine3.23
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${CCM_POSTGRES_DB:-compliance_control}
+      POSTGRES_USER: ${CCM_POSTGRES_USER:-ccm}
+      POSTGRES_PASSWORD: ${CCM_POSTGRES_PASSWORD:?Set CCM_POSTGRES_PASSWORD}
+    volumes:
+      - ccm_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 4s
+      retries: 20
+
+volumes:
+  ccm_postgres_data:

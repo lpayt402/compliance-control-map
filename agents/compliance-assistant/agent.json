@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "compliance-assistant",
+  "name": "Compliance assistant",
+  "description": "A bounded, advisory assistant for selected requirements and controls.",
+  "enabled": true,
+  "instructions_file": "instructions.md",
+  "provider_profile_ref": null,
+  "skills": [
+    "requirement-summary-next-actions",
+    "draft-implementation-notes",
+    "draft-evidence-playbook",
+    "control-review"
+  ],
+  "tools": [
+    "get_requirement_context",
+    "get_control_context",
+    "list_mapped_controls",
+    "list_mapped_requirements",
+    "list_text_resources",
+    "list_library_metadata",
+    "list_crosswalk_metadata"
+  ],
+  "record_scopes": ["requirement", "control", "document_metadata", "evidence_metadata"],
+  "human_confirmation": ["external_transfer"],
+  "max_iterations": 4,
+  "timeout_seconds": 90
+}

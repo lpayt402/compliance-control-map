@@ -1,0 +1,428 @@
+requirements:
+  - external_id: CC1.1
+    domain_id: CC1
+    title: Integrity and ethical conduct
+    summary: Set and reinforce expectations that people act with integrity and follow defined ethical standards.
+    guidance: Illustrative practices can include a code of conduct, leadership messaging, conflict disclosures, and consistent responses to misconduct.
+    source_reference: 2017 TSC CC1.1
+    sort_order: 10
+  - external_id: CC1.2
+    domain_id: CC1
+    title: Independent oversight
+    summary: Maintain governing-body independence and effective oversight of the system of internal control.
+    guidance: Illustrative practices can include defined board responsibilities, relevant expertise, private sessions, and documented challenge of management.
+    source_reference: 2017 TSC CC1.2
+    sort_order: 20
+  - external_id: CC1.3
+    domain_id: CC1
+    title: Authority and accountability structure
+    summary: Establish structures, reporting lines, authority, and responsibility that support the organization's objectives.
+    guidance: Illustrative practices can include current organization charts, role descriptions, delegated authorities, and escalation paths.
+    source_reference: 2017 TSC CC1.3
+    sort_order: 30
+  - external_id: CC1.4
+    domain_id: CC1
+    title: Competent people
+    summary: Attract, develop, and retain people with the competence needed to carry out control responsibilities.
+    guidance: Illustrative practices can include role-based qualifications, onboarding, training plans, performance reviews, and succession planning.
+    source_reference: 2017 TSC CC1.4
+    sort_order: 40
+  - external_id: CC1.5
+    domain_id: CC1
+    title: Control accountability
+    summary: Hold people accountable for performing their assigned internal-control responsibilities.
+    guidance: Illustrative practices can include measurable responsibilities, performance consequences, workload review, and timely remediation ownership.
+    source_reference: 2017 TSC CC1.5
+    sort_order: 50
+  - external_id: CC2.1
+    domain_id: CC2
+    title: Quality information
+    summary: Obtain or produce relevant, reliable information in time to support the operation of internal control.
+    guidance: Illustrative practices can include defined data sources, quality checks, reporting owners, and retention of decision-support records.
+    source_reference: 2017 TSC CC2.1
+    sort_order: 60
+  - external_id: CC2.2
+    domain_id: CC2
+    title: Internal communication
+    summary: Communicate objectives, responsibilities, and control information throughout the organization.
+    guidance: Illustrative practices can include policy distribution, role-specific briefings, escalation channels, and confirmation of important communications.
+    source_reference: 2017 TSC CC2.2
+    sort_order: 70
+  - external_id: CC2.3
+    domain_id: CC2
+    title: External communication
+    summary: Communicate relevant information with customers, partners, regulators, and other external parties.
+    guidance: Illustrative practices can include published commitments, support channels, incident contacts, and controlled regulatory or customer reporting.
+    source_reference: 2017 TSC CC2.3
+    sort_order: 80
+  - external_id: CC3.1
+    domain_id: CC3
+    title: Clear objectives
+    summary: Define objectives precisely enough to identify and assess risks that could prevent their achievement.
+    guidance: Illustrative practices can include measurable service commitments, security objectives, risk tolerances, and periodic objective review.
+    source_reference: 2017 TSC CC3.1
+    sort_order: 90
+  - external_id: CC3.2
+    domain_id: CC3
+    title: Risk identification and analysis
+    summary: Identify risks across the organization and analyze their likelihood, impact, and required response.
+    guidance: Illustrative practices can include a maintained risk register, defined scoring criteria, responsible owners, and treatment decisions.
+    source_reference: 2017 TSC CC3.2
+    sort_order: 100
+  - external_id: CC3.3
+    domain_id: CC3
+    title: Fraud risk
+    summary: Consider fraud scenarios when assessing risks to organizational and system objectives.
+    guidance: Illustrative practices can include abuse-case reviews, segregation-of-duties analysis, incentive assessment, and fraud reporting channels.
+    source_reference: 2017 TSC CC3.3
+    sort_order: 110
+  - external_id: CC3.4
+    domain_id: CC3
+    title: Significant change
+    summary: Identify and assess internal or external changes that could materially affect the system of internal control.
+    guidance: Illustrative practices can include acquisition reviews, technology-change risk assessments, regulatory tracking, and organizational change gates.
+    source_reference: 2017 TSC CC3.4
+    sort_order: 120
+  - external_id: CC4.1
+    domain_id: CC4
+    title: Control evaluation
+    summary: Use ongoing monitoring or separate evaluations to determine whether controls are present and operating.
+    guidance: Illustrative practices can include management reviews, control self-assessments, internal audits, metrics, and independent testing.
+    source_reference: 2017 TSC CC4.1
+    sort_order: 130
+  - external_id: CC4.2
+    domain_id: CC4
+    title: Deficiency communication
+    summary: Evaluate control deficiencies and communicate them promptly to people responsible for correction and oversight.
+    guidance: Illustrative practices can include severity criteria, remediation owners, due dates, escalation thresholds, and board reporting.
+    source_reference: 2017 TSC CC4.2
+    sort_order: 140
+  - external_id: CC5.1
+    domain_id: CC5
+    title: Risk-reducing control activities
+    summary: Select and develop control activities that reduce identified risks to acceptable levels.
+    guidance: Illustrative practices can include preventive and detective controls, approval limits, reconciliations, and segregation of duties.
+    source_reference: 2017 TSC CC5.1
+    sort_order: 150
+  - external_id: CC5.2
+    domain_id: CC5
+    title: Technology control activities
+    summary: Establish general control activities over technology that supports organizational objectives.
+    guidance: Illustrative practices can include access administration, secure configuration, job monitoring, backup controls, and infrastructure change controls.
+    source_reference: 2017 TSC CC5.2
+    sort_order: 160
+  - external_id: CC5.3
+    domain_id: CC5
+    title: Policies and procedures
+    summary: Put control activities into operation through clear policies and procedures that assign responsibility and expected action.
+    guidance: Illustrative practices can include approved standards, procedure owners, required evidence, exception handling, and scheduled review.
+    source_reference: 2017 TSC CC5.3
+    sort_order: 170
+  - external_id: CC6.1
+    domain_id: CC6
+    title: Logical access safeguards
+    summary: Design and operate logical access protections for systems, infrastructure, and information according to authorized responsibilities.
+    guidance: Illustrative practices can include identity management, role-based access, strong authentication, network controls, and periodic access review.
+    source_reference: 2017 TSC CC6.1
+    sort_order: 180
+  - external_id: CC6.2
+    domain_id: CC6
+    title: User access lifecycle
+    summary: Register and authorize new users, modify access when responsibilities change, and remove access when it is no longer needed.
+    guidance: Illustrative practices can include approved requests, joiner-mover-leaver workflows, service-account ownership, and prompt revocation checks.
+    source_reference: 2017 TSC CC6.2
+    sort_order: 190
+  - external_id: CC6.3
+    domain_id: CC6
+    title: Role-appropriate authorization
+    summary: Authorize and manage access based on job responsibilities, least privilege, and separation of incompatible duties.
+    guidance: Illustrative practices can include role matrices, privileged-access review, approval by resource owners, and conflicting-access detection.
+    source_reference: 2017 TSC CC6.3
+    sort_order: 200
+  - external_id: CC6.4
+    domain_id: CC6
+    title: Physical access restrictions
+    summary: Restrict physical access to facilities, equipment, and protected information to authorized people.
+    guidance: Illustrative practices can include badges, visitor logs, secured areas, camera coverage, and periodic review of physical access.
+    source_reference: 2017 TSC CC6.4
+    sort_order: 210
+  - external_id: CC6.5
+    domain_id: CC6
+    title: Secure asset retirement
+    summary: Remove logical and physical protections only after sensitive information on retired assets can no longer be read or recovered and retention needs are met.
+    guidance: Illustrative practices can include approved sanitization methods, destruction records, custody tracking, and verification before disposal or reuse.
+    source_reference: 2017 TSC CC6.5
+    sort_order: 220
+  - external_id: CC6.6
+    domain_id: CC6
+    title: System boundary protection
+    summary: Protect system boundaries and control communications with external or less-trusted environments.
+    guidance: Illustrative practices can include firewalls, segmentation, secure gateways, restricted protocols, monitored connections, and boundary reviews.
+    source_reference: 2017 TSC CC6.6
+    sort_order: 230
+  - external_id: CC6.7
+    domain_id: CC6
+    title: Protected data movement
+    summary: Restrict and protect the transmission, movement, and removal of information according to its sensitivity and authorized use.
+    guidance: Illustrative practices can include encryption, approved transfer methods, removable-media controls, data-loss prevention, and transfer logging.
+    source_reference: 2017 TSC CC6.7
+    sort_order: 240
+  - external_id: CC6.8
+    domain_id: CC6
+    title: Malicious software protection
+    summary: Prevent or detect unauthorized and malicious software and respond when it is found.
+    guidance: Illustrative practices can include endpoint protection, application controls, signature updates, email filtering, and malware-response procedures.
+    source_reference: 2017 TSC CC6.8
+    sort_order: 250
+  - external_id: CC7.1
+    domain_id: CC7
+    title: Configuration and vulnerability awareness
+    summary: Detect configuration changes and newly identified vulnerabilities that could create risk to the system.
+    guidance: Illustrative practices can include configuration monitoring, vulnerability scanning, threat advisories, asset inventories, and risk-based triage.
+    source_reference: 2017 TSC CC7.1
+    sort_order: 260
+  - external_id: CC7.2
+    domain_id: CC7
+    title: Anomaly and event monitoring
+    summary: Monitor system components and information for anomalies that may indicate security, availability, or processing problems.
+    guidance: Illustrative practices can include centralized logs, alert rules, baseline behavior, operational dashboards, and protected audit trails.
+    source_reference: 2017 TSC CC7.2
+    sort_order: 270
+  - external_id: CC7.3
+    domain_id: CC7
+    title: Event evaluation
+    summary: Evaluate detected events to determine whether they are incidents and what response is appropriate.
+    guidance: Illustrative practices can include triage criteria, severity classification, investigation records, correlation, and documented disposition.
+    source_reference: 2017 TSC CC7.3
+    sort_order: 280
+  - external_id: CC7.4
+    domain_id: CC7
+    title: Incident response
+    summary: Contain, remediate, and communicate identified incidents through a coordinated response process.
+    guidance: Illustrative practices can include response roles, containment playbooks, legal and customer communication paths, evidence preservation, and lessons learned.
+    source_reference: 2017 TSC CC7.4
+    sort_order: 290
+  - external_id: CC7.5
+    domain_id: CC7
+    title: Incident recovery
+    summary: Restore affected services and information after an incident while reducing the risk of recurrence.
+    guidance: Illustrative practices can include recovery priorities, clean restoration, integrity checks, heightened monitoring, and corrective-action tracking.
+    source_reference: 2017 TSC CC7.5
+    sort_order: 300
+  - external_id: CC8.1
+    domain_id: CC8
+    title: Controlled change management
+    summary: Authorize, design, develop or configure, test, approve, and implement changes in a controlled manner.
+    guidance: Illustrative practices can include change tickets, peer review, test evidence, deployment approval, rollback plans, and emergency-change review.
+    source_reference: 2017 TSC CC8.1
+    sort_order: 310
+  - external_id: CC9.1
+    domain_id: CC9
+    title: Risk treatment
+    summary: Select and carry out actions that mitigate, transfer, avoid, or consciously accept identified risks.
+    guidance: Illustrative practices can include treatment plans, acceptance authority, insurance, compensating controls, and residual-risk review.
+    source_reference: 2017 TSC CC9.1
+    sort_order: 320
+  - external_id: CC9.2
+    domain_id: CC9
+    title: Third-party risk
+    summary: Identify, assess, and manage risks arising from vendors, service providers, and other business partners.
+    guidance: Illustrative practices can include due diligence, contract requirements, ongoing review, concentration analysis, and orderly termination procedures.
+    source_reference: 2017 TSC CC9.2
+    sort_order: 330
+  - external_id: A1.1
+    domain_id: A1
+    title: Capacity and demand
+    summary: Monitor and manage capacity so system resources can meet current commitments and reasonably expected demand.
+    guidance: Illustrative practices can include utilization thresholds, trend analysis, scaling plans, load tests, and capacity-related alerts.
+    source_reference: 2017 TSC A1.1
+    sort_order: 340
+  - external_id: A1.2
+    domain_id: A1
+    title: Environmental resilience
+    summary: Protect system components from environmental threats and provide infrastructure that supports continued or recoverable operation.
+    guidance: Illustrative practices can include redundant power and connectivity, fire suppression, environmental monitoring, alternate facilities, and resilient hosting design.
+    source_reference: 2017 TSC A1.2
+    sort_order: 350
+  - external_id: A1.3
+    domain_id: A1
+    title: Recovery readiness
+    summary: Maintain, test, and improve recovery procedures that support the organization's availability objectives.
+    guidance: Illustrative practices can include defined recovery targets, tested backups, restoration exercises, dependency maps, and documented test follow-up.
+    source_reference: 2017 TSC A1.3
+    sort_order: 360
+  - external_id: PI1.1
+    domain_id: PI1
+    title: Processing objectives
+    summary: Define processing objectives that specify the completeness, validity, accuracy, timeliness, and authorization expected from the system.
+    guidance: Illustrative practices can include data-quality rules, service-level expectations, authorized transaction types, and measurable acceptance criteria.
+    source_reference: 2017 TSC PI1.1
+    sort_order: 370
+  - external_id: PI1.2
+    domain_id: PI1
+    title: Controlled inputs
+    summary: Apply controls so system inputs are complete, valid, accurate, timely, and authorized.
+    guidance: Illustrative practices can include input validation, required fields, duplicate checks, source authorization, rejection handling, and batch reconciliation.
+    source_reference: 2017 TSC PI1.2
+    sort_order: 380
+  - external_id: PI1.3
+    domain_id: PI1
+    title: Controlled processing
+    summary: Apply controls so information is processed completely, validly, accurately, on time, and only as authorized.
+    guidance: Illustrative practices can include transaction sequencing, exception queues, job monitoring, balancing controls, and approved processing rules.
+    source_reference: 2017 TSC PI1.3
+    sort_order: 390
+  - external_id: PI1.4
+    domain_id: PI1
+    title: Controlled outputs
+    summary: Apply controls so processing outputs are complete, valid, accurate, timely, and distributed only as authorized.
+    guidance: Illustrative practices can include output reconciliation, distribution controls, delivery confirmation, exception review, and report validation.
+    source_reference: 2017 TSC PI1.4
+    sort_order: 400
+  - external_id: PI1.5
+    domain_id: PI1
+    title: Protected processing records
+    summary: Store inputs, items in process, and outputs completely and accurately for the period needed to meet processing objectives.
+    guidance: Illustrative practices can include record-count reconciliation, integrity protections, retention schedules, recoverability checks, and controlled corrections.
+    source_reference: 2017 TSC PI1.5
+    sort_order: 410
+  - external_id: C1.1
+    domain_id: C1
+    title: Confidential information protection
+    summary: Identify information designated confidential and protect it throughout its authorized use and retention period.
+    guidance: Illustrative practices can include classification, access restrictions, encryption, handling standards, contractual markings, and retention controls.
+    source_reference: 2017 TSC C1.1
+    sort_order: 420
+  - external_id: C1.2
+    domain_id: C1
+    title: Confidential information disposal
+    summary: Dispose of confidential information when it is no longer required, using methods appropriate to the information and media.
+    guidance: Illustrative practices can include deletion schedules, cryptographic erasure, media destruction, disposal vendors, and retained destruction evidence.
+    source_reference: 2017 TSC C1.2
+    sort_order: 430
+  - external_id: P1.1
+    domain_id: P1
+    title: Privacy notice
+    summary: Give clear notice of privacy objectives and practices, including purposes, choices, uses, disclosures, retention, and contact methods.
+    guidance: Illustrative practices can include layered notices, just-in-time disclosures, change notices, accessible language, and versioned publication records.
+    source_reference: 2017 TSC P1.1
+    sort_order: 440
+  - external_id: P2.1
+    domain_id: P2
+    title: Privacy choice and consent
+    summary: Communicate available privacy choices and obtain consent when required for collecting, using, retaining, or disclosing personal information.
+    guidance: Illustrative practices can include consent records, preference centers, withdrawal mechanisms, age-appropriate consent, and purpose-specific choices.
+    source_reference: 2017 TSC P2.1
+    sort_order: 450
+  - external_id: P3.1
+    domain_id: P3
+    title: Purpose-limited collection
+    summary: Collect personal information only for identified purposes and through fair and lawful means.
+    guidance: Illustrative practices can include field-level purpose review, data minimization, approved collection forms, and controls over indirect data sources.
+    source_reference: 2017 TSC P3.1
+    sort_order: 460
+  - external_id: P3.2
+    domain_id: P3
+    title: Explicit consent collection
+    summary: When explicit consent is required, explain why the information is needed and the consequences of withholding consent before collecting it.
+    guidance: Illustrative practices can include unbundled consent, affirmative action, timestamped consent evidence, and blocking collection when consent is absent.
+    source_reference: 2017 TSC P3.2
+    sort_order: 470
+  - external_id: P4.1
+    domain_id: P4
+    title: Purpose-aligned use
+    summary: Limit the use of personal information to stated objectives and other uses authorized through valid choice or consent.
+    guidance: Illustrative practices can include use-case inventories, purpose checks for new features, role restrictions, and secondary-use approval.
+    source_reference: 2017 TSC P4.1
+    sort_order: 480
+  - external_id: P4.2
+    domain_id: P4
+    title: Personal information retention
+    summary: Retain personal information only as long as needed for stated objectives, legal obligations, or other authorized purposes.
+    guidance: Illustrative practices can include record-specific schedules, legal holds, automated expiry, archive controls, and periodic retention review.
+    source_reference: 2017 TSC P4.2
+    sort_order: 490
+  - external_id: P4.3
+    domain_id: P4
+    title: Personal information disposal
+    summary: Securely dispose of personal information after its authorized retention period ends.
+    guidance: Illustrative practices can include deletion workflows, backup expiry, media sanitization, vendor destruction requirements, and disposal verification.
+    source_reference: 2017 TSC P4.3
+    sort_order: 500
+  - external_id: P5.1
+    domain_id: P5
+    title: Authenticated privacy access
+    summary: Authenticate a person's identity before providing access to personal information held about that person.
+    guidance: Illustrative practices can include proportionate identity checks, secure request channels, representative authorization, and disclosure logging.
+    source_reference: 2017 TSC P5.1
+    sort_order: 510
+  - external_id: P5.2
+    domain_id: P5
+    title: Correction and dispute handling
+    summary: Provide a process to correct personal information or record a dispute, and explain decisions when a requested change is denied.
+    guidance: Illustrative practices can include tracked requests, evidence review, downstream correction notices, appeal paths, and reasoned denial responses.
+    source_reference: 2017 TSC P5.2
+    sort_order: 520
+  - external_id: P6.1
+    domain_id: P6
+    title: Authorized disclosure
+    summary: Disclose personal information to third parties only for stated objectives and with valid consent or other authorization.
+    guidance: Illustrative practices can include purpose checks, consent verification, approved recipients, minimum-necessary disclosure, and secure transfer.
+    source_reference: 2017 TSC P6.1
+    sort_order: 530
+  - external_id: P6.2
+    domain_id: P6
+    title: Disclosure records
+    summary: Maintain complete, accurate, and timely records of authorized disclosures of personal information.
+    guidance: Illustrative practices can include recipient, purpose, data category, authorization, and date in a searchable disclosure register.
+    source_reference: 2017 TSC P6.2
+    sort_order: 540
+  - external_id: P6.3
+    domain_id: P6
+    title: Unauthorized disclosure records
+    summary: Record detected or reported unauthorized disclosures of personal information completely, accurately, and promptly.
+    guidance: Illustrative practices can include incident linkage, affected data and people, discovery source, timeline, containment, and notification decisions.
+    source_reference: 2017 TSC P6.3
+    sort_order: 550
+  - external_id: P6.4
+    domain_id: P6
+    title: Third-party privacy commitments
+    summary: Obtain enforceable privacy commitments from vendors and other third parties that can access personal information.
+    guidance: Illustrative practices can include data-processing terms, permitted purposes, safeguards, subprocessor rules, return or deletion, and audit rights.
+    source_reference: 2017 TSC P6.4
+    sort_order: 560
+  - external_id: P6.5
+    domain_id: P6
+    title: Third-party incident notification
+    summary: Require relevant third parties to report actual or suspected unauthorized disclosures and evaluate those reports promptly.
+    guidance: Illustrative practices can include contractual notification windows, named contacts, incident detail requirements, escalation, and corrective-action follow-up.
+    source_reference: 2017 TSC P6.5
+    sort_order: 570
+  - external_id: P6.6
+    domain_id: P6
+    title: Privacy incident notification
+    summary: Notify affected people, regulators, and other parties about privacy incidents when required and within applicable timeframes.
+    guidance: Illustrative practices can include jurisdiction analysis, approved templates, legal review, delivery evidence, regulator coordination, and support channels.
+    source_reference: 2017 TSC P6.6
+    sort_order: 580
+  - external_id: P6.7
+    domain_id: P6
+    title: Disclosure accounting
+    summary: Provide an accounting of personal information held and disclosed when such an accounting is required or validly requested.
+    guidance: Illustrative practices can include authenticated requests, compiled disclosure histories, documented exceptions, response deadlines, and delivery tracking.
+    source_reference: 2017 TSC P6.7
+    sort_order: 590
+  - external_id: P7.1
+    domain_id: P7
+    title: Personal information quality
+    summary: Keep personal information accurate, complete, relevant, and current enough for the purposes for which it is used.
+    guidance: Illustrative practices can include source validation, user updates, reconciliation, freshness checks, correction propagation, and quality metrics.
+    source_reference: 2017 TSC P7.1
+    sort_order: 600
+  - external_id: P8.1
+    domain_id: P8
+    title: Privacy monitoring and complaints
+    summary: Monitor compliance with privacy commitments and operate a fair process for inquiries, complaints, disputes, and corrective action.
+    guidance: Illustrative practices can include complaint channels, case tracking, response targets, trend review, independent escalation, and remediation verification.
+    source_reference: 2017 TSC P8.1
+    sort_order: 610

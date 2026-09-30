@@ -1,0 +1,9 @@
+framework:
+  slug: soc2
+  name: SOC 2 Trust Services Criteria
+  version: 2017-tsc-pof-2022
+  description: A readiness-oriented catalog covering the AICPA Trust Services Criteria categories and common criteria.
+  source_uri: https://www.aicpa-cima.com/resources/download/2017-trust-services-criteria-with-revised-points-of-focus-2022
+  verified_on: "2026-08-21"
+  published_at: "2022-10-01"
+  disclaimer: Independent, non-authoritative readiness summaries. These are not AICPA criteria, legal advice, an audit opinion, or a substitute for the current Trust Services Criteria and guidance from your CPA.

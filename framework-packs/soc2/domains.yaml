@@ -1,0 +1,81 @@
+domains:
+  - external_id: CC1
+    name: Control Environment
+    description: Governance, accountability, competence, and foundational expectations for internal control.
+    sort_order: 10
+  - external_id: CC2
+    name: Information and Communication
+    description: Information quality and communication needed to operate and understand internal control.
+    sort_order: 20
+  - external_id: CC3
+    name: Risk Assessment
+    description: Objectives, risk identification, fraud considerations, and significant change.
+    sort_order: 30
+  - external_id: CC4
+    name: Monitoring Activities
+    description: Ongoing or separate evaluations and communication of control deficiencies.
+    sort_order: 40
+  - external_id: CC5
+    name: Control Activities
+    description: Selected and deployed activities, including technology controls, that reduce risk.
+    sort_order: 50
+  - external_id: CC6
+    name: Logical and Physical Access Controls
+    description: Safeguards for identities, access, credentials, facilities, assets, and data movement.
+    sort_order: 60
+  - external_id: CC7
+    name: System Operations
+    description: Detection, evaluation, response, and recovery for operational and security events.
+    sort_order: 70
+  - external_id: CC8
+    name: Change Management
+    description: Authorized, tested, approved, and controlled changes to systems and infrastructure.
+    sort_order: 80
+  - external_id: CC9
+    name: Risk Mitigation
+    description: Risk treatment and oversight of risks introduced by vendors and business partners.
+    sort_order: 90
+  - external_id: A1
+    name: Availability
+    description: Capacity, resilience, recovery, and environmental protections that support availability commitments.
+    sort_order: 100
+  - external_id: PI1
+    name: Processing Integrity
+    description: Complete, valid, accurate, timely, and authorized processing.
+    sort_order: 110
+  - external_id: C1
+    name: Confidentiality
+    description: Identification, protection, and disposal of information designated confidential.
+    sort_order: 120
+  - external_id: P1
+    name: Privacy Notice
+    description: Notice of privacy practices, purposes, choices, and consequences.
+    sort_order: 130
+  - external_id: P2
+    name: Choice and Consent
+    description: Communicating choices and obtaining consent for personal information practices.
+    sort_order: 140
+  - external_id: P3
+    name: Collection
+    description: Purpose-limited collection using fair and lawful methods.
+    sort_order: 150
+  - external_id: P4
+    name: Use, Retention, and Disposal
+    description: Purpose-aligned use and controlled retention and disposal of personal information.
+    sort_order: 160
+  - external_id: P5
+    name: Access
+    description: Authenticated access to personal information and correction or dispute handling.
+    sort_order: 170
+  - external_id: P6
+    name: Disclosure and Notification
+    description: Controlled disclosure, third-party obligations, incident notification, and data subject communication.
+    sort_order: 180
+  - external_id: P7
+    name: Data Quality
+    description: Maintaining personal information that is relevant, accurate, complete, and current for its purposes.
+    sort_order: 190
+  - external_id: P8
+    name: Privacy Monitoring and Enforcement
+    description: Monitoring privacy commitments and resolving complaints and disputes.
+    sort_order: 200

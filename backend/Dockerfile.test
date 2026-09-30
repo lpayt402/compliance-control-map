@@ -1,0 +1,27 @@
+FROM python:3.12.14-slim-bookworm
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /workspace/backend
+
+COPY backend/pyproject.toml ./pyproject.toml
+COPY backend/app ./app
+COPY backend/alembic ./alembic
+COPY backend/alembic.ini ./alembic.ini
+
+RUN pip install --no-cache-dir ".[dev]"
+
+COPY backend/tests ./tests
+COPY framework-packs /workspace/framework-packs
+COPY backend/demo-files /workspace/backend/demo-files
+COPY agents /workspace/agents
+COPY skills /workspace/skills
+
+RUN addgroup --system --gid 10002 ccm-test \
+    && adduser --system --uid 10002 --ingroup ccm-test --home /workspace ccm-test \
+    && chown -R ccm-test:ccm-test /workspace
+
+USER 10002:10002
+CMD ["python", "-m", "pytest", "tests", "-q", "--basetemp=.pytest-tmp-postgres"]

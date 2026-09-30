@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "draft-evidence-playbook",
+  "version": "1.0.0",
+  "name": "Draft evidence-collection playbook",
+  "description": "Drafts a repeatable evidence-collection playbook for local review.",
+  "enabled": true,
+  "instructions_file": "instructions.md",
+  "allowed_tools": ["get_requirement_context", "get_control_context", "list_mapped_controls", "list_mapped_requirements", "list_text_resources", "list_library_metadata"],
+  "record_scopes": ["requirement", "control", "document_metadata", "evidence_metadata"],
+  "writes_workspace": false,
+  "requires_confirmation": false,
+  "output_schema_file": "output-schema.json"
+}

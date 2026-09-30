@@ -1,0 +1,22 @@
+services:
+  api:
+    environment:
+      # The isolated smoke endpoint is HTTP on loopback; production deployments use TLS.
+      CCM_APP_ENV: development
+
+  web:
+    ports: !override
+      - "127.0.0.1:${CCM_WEB_PORT}:8080"
+
+  postgres:
+    ports:
+      - "127.0.0.1:${CCM_POSTGRES_TEST_PORT}:5432"
+
+  backend-tests:
+    profiles: ["test"]
+    build:
+      context: .
+      dockerfile: backend/Dockerfile.test
+    depends_on:
+      postgres:
+        condition: service_healthy

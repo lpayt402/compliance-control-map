@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.invalid/compliance-control-map/skill-manifest.schema.json",
+  "title": "Compliance Control Map skill manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "id", "version", "name", "description", "enabled", "instructions_file", "allowed_tools", "record_scopes", "writes_workspace", "requires_confirmation"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+    "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+    "description": { "type": "string", "minLength": 1, "maxLength": 1000 },
+    "enabled": { "type": "boolean" },
+    "instructions_file": { "type": "string", "pattern": "^[^/\\\\].*\\.md$" },
+    "allowed_tools": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" } },
+    "record_scopes": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "enum": ["requirement", "control", "document_metadata", "evidence_metadata"] }
+    },
+    "writes_workspace": { "type": "boolean" },
+    "requires_confirmation": { "type": "boolean" },
+    "output_schema_file": { "type": ["string", "null"], "pattern": "^[^/\\\\].*\\.json$" }
+  }
+}

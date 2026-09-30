@@ -1,0 +1,65 @@
+name: ${COMPOSE_PROJECT_NAME:-compliance-control-map}
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    restart: unless-stopped
+    environment:
+      CCM_APP_ENV: development
+      CCM_AUTH_MODE: disabled
+      CCM_ALLOW_INSECURE_NO_AUTH: "true"
+      CCM_BIND_HOST: 0.0.0.0
+      CCM_DATABASE_URL: sqlite:////data/db/compliance-control.db
+      CCM_STORAGE_ROOT: /data/files
+      CCM_FRAMEWORK_PACK_ROOT: /app/framework-packs
+      CCM_DEMO_FILES_ROOT: /app/demo-files
+      CCM_LOAD_DEMO: ${CCM_LOAD_DEMO:-true}
+      CCM_MAX_UPLOAD_BYTES: ${CCM_MAX_UPLOAD_BYTES:-52428800}
+      CCM_ALLOWED_ORIGINS: '["http://localhost:${CCM_WEB_PORT:-3000}","http://127.0.0.1:${CCM_WEB_PORT:-3000}"]'
+      CCM_ALLOWED_HOSTS: '["localhost","127.0.0.1"]'
+      CCM_INFERENCE_ENABLED: ${CCM_INFERENCE_ENABLED:-false}
+      CCM_INFERENCE_ALLOWED_BASE_URLS: ${CCM_INFERENCE_ALLOWED_BASE_URLS:-[]}
+      CCM_INFERENCE_MAX_CONCURRENT_RUNS: ${CCM_INFERENCE_MAX_CONCURRENT_RUNS:-2}
+      CCM_INFERENCE_MAX_CONTEXT_CHARS: ${CCM_INFERENCE_MAX_CONTEXT_CHARS:-60000}
+      CCM_INFERENCE_MAX_OUTPUT_CHARS: ${CCM_INFERENCE_MAX_OUTPUT_CHARS:-12000}
+      CCM_INFERENCE_MAX_ITERATIONS: ${CCM_INFERENCE_MAX_ITERATIONS:-4}
+      CCM_INFERENCE_MAX_TOOL_CALLS: ${CCM_INFERENCE_MAX_TOOL_CALLS:-8}
+      CCM_INFERENCE_TIMEOUT_SECONDS: ${CCM_INFERENCE_TIMEOUT_SECONDS:-90}
+      CCM_INFERENCE_AGENT_ROOT: /app/agents
+      CCM_INFERENCE_SKILL_ROOT: /app/skills
+      CCM_MODEL_API_KEY: ${CCM_MODEL_API_KEY:-}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ccm_sqlite_data:/data/db
+      - ccm_file_data:/data/files
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/v1/health/ready', timeout=3)"]
+      interval: 5s
+      timeout: 4s
+      retries: 20
+      start_period: 15s
+
+  web:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      api:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:${CCM_WEB_PORT:-3000}:8080"
+    healthcheck:
+      test: ["CMD", "wget", "-q", "-O", "-", "http://127.0.0.1:8080/"]
+      interval: 10s
+      timeout: 4s
+      retries: 10
+
+volumes:
+  ccm_sqlite_data:
+  ccm_file_data:

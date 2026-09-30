@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["implementation_notes", "assumptions", "missing_details", "source_references"],
+  "properties": {
+    "implementation_notes": {"type": "string"},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "missing_details": {"type": "array", "items": {"type": "string"}},
+    "source_references": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+  }
+}
