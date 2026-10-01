@@ -1,8 +1,8 @@
 # Compliance Control Map
 
-A self-hosted workspace for mapping SOC 2 readiness, assigning gaps, and linking controls, documents, and evidence. The map view gives each requirement a compact detail panel.
+Compliance Control Map is a self-hosted workspace for SOC 2 readiness that maps requirements, assigns gaps, and links controls, documents, and evidence. The map view gives each requirement a compact detail panel.
 
-SOC 2 Trust Services Criteria is the first included framework. Requirements and organizational controls stay separate, so a control can support multiple frameworks without making their statuses interchangeable.
+SOC 2 Trust Services Criteria is the first included framework. Requirements and organizational controls are tracked separately, as are their statuses. A single control can support multiple frameworks without blending those statuses.
 
 ## Quick start
 
