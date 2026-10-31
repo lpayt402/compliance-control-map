@@ -41,7 +41,7 @@ Useful commands:
 
 **Local mode: no login and no credentials.** It is intentionally limited to `127.0.0.1` and is suitable for solo work and demo/testing.
 
-**Server mode:** the first login email is the value of `CCM_BOOTSTRAP_ADMIN_EMAIL` in `.env`; the first password is `CCM_BOOTSTRAP_ADMIN_PASSWORD`. The launcher prints the email but never prints the password. These are bootstrap credentials, not built-in defaults—replace the example values before the first server start.
+**Server mode:** the first login email is the value of `CCM_BOOTSTRAP_ADMIN_EMAIL` in `.env`; the first password is `CCM_BOOTSTRAP_ADMIN_PASSWORD`. The launcher prints the email but never prints the password. These are bootstrap credentials, not built-in defaults. Replace the example values before the first server start.
 
 After signing in, open **Settings → Change my password**. A successful change signs that account out everywhere. Confirm the new password works, then clear both bootstrap values in `.env`:
 
@@ -56,7 +56,7 @@ Admins manage accounts under **Settings → Users and roles**. They can add user
 
 ## What is included
 
-- Dashboard with status counts, honest readiness math, gaps, overdue work, missing documentation/evidence, and recent changes.
+- Dashboard with status counts, readiness totals, gaps, overdue work, missing documentation/evidence, and recent changes.
 - Framework Map with status colors plus text labels, filtering, search, keyboard access, and a modal detail sheet.
 - Tracker with sorting, filtering, search, and inline readiness changes.
 - Requirement ownership, assignee, due date, applicability, tags, implementation notes, typed notes/playbooks/contacts, and activity.
@@ -68,7 +68,7 @@ Admins manage accounts under **Settings → Users and roles**. They can add user
 - Admin, Editor, and Viewer roles in team mode.
 - Optional, default-off model assistance with exact context review, bounded read-only tools, streamed advisory output, and human-saved local drafts.
 
-Readiness is the whole-number percentage `READY / (ALL - NOT_APPLICABLE)`. A partial or in-progress item is not counted as ready. This avoids invented fractional certainty; assessed coverage is shown separately.
+Readiness is the whole-number percentage `READY / (ALL - NOT_APPLICABLE)`. A partial or in-progress item is not counted as ready. Assessed coverage is shown separately.
 
 ## Architecture
 
@@ -165,7 +165,7 @@ The restore accepts a fresh team workspace containing only its active bootstrap 
 
 Framework content lives under `framework-packs/<slug>/`, not in application code. A pack has `manifest.yaml`, `domains.yaml`, and `requirements.yaml` and is validated before import. Imported versions are content-hashed and immutable; corrections ship as a new version.
 
-See [`docs/framework-packs.md`](docs/framework-packs.md) and [`framework-packs/soc2/README.md`](framework-packs/soc2/README.md). Included SOC 2 text is concise, independently authored readiness guidance—not official AICPA criterion text, legal advice, or an audit opinion. Always consult current licensed source material and your CPA.
+See [`docs/framework-packs.md`](docs/framework-packs.md) and [`framework-packs/soc2/README.md`](framework-packs/soc2/README.md). Included SOC 2 text is concise, independently authored readiness guidance. It is not official AICPA criterion text, legal advice, or an audit opinion. Always consult current licensed source material and your CPA.
 
 ## Development
 
