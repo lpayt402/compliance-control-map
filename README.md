@@ -1,8 +1,16 @@
 # Compliance Control Map
 
-Compliance Control Map is a self-hosted workspace for SOC 2 readiness that maps requirements, assigns gaps, and links controls, documents, and evidence. The map view gives each requirement a compact detail panel.
+Compliance Control Map is a self-hosted readiness workspace that shows which requirements have gaps, who owns them, and what controls and evidence support the work. SOC 2 is the first included framework pack; it helps you prepare for an audit, but it does not provide an audit opinion.
 
-SOC 2 Trust Services Criteria is the first included framework. Requirements and organizational controls are tracked separately, as are their statuses. A single control can support multiple frameworks without blending those statuses.
+## See the fictional demo
+
+The framework map shows readiness by requirement, with filters and a detail panel. Requirement readiness, control status, and evidence coverage are tracked separately.
+
+![SOC 2 framework map with requirement cards, status labels, and filters](docs/screenshots/soc2-framework-map.png)
+
+Opening a requirement shows the gap, its owner and due date, and the work still needed. This example uses the built-in fictional demo records.
+
+![Demo gap for CC7.1 showing the Gap status, Demo Control Owner, due date, and implementation notes](docs/screenshots/soc2-gap-detail.png)
 
 ## Quick start
 
@@ -168,6 +176,8 @@ Framework content lives under `framework-packs/<slug>/`, not in application code
 See [`docs/framework-packs.md`](docs/framework-packs.md) and [`framework-packs/soc2/README.md`](framework-packs/soc2/README.md). Included SOC 2 text is concise, independently authored readiness guidance. It is not official AICPA criterion text, legal advice, or an audit opinion. Always consult current licensed source material and your CPA.
 
 ## Development
+
+Tests run locally. There is no GitHub Actions workflow configured. The backend and frontend checks run without Docker; the deployment smoke checks below require Docker Compose.
 
 Backend setup and checks:
 
